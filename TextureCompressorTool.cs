@@ -56,7 +56,7 @@ public class SuperSafeTextureOptimizer : EditorWindow
                 if (IsSpecialTexture(importer))
                 {
                     processed++;
-                    continue; // Special textures رد میشن
+                    continue;
                 }
 
                 importer.isReadable = false;
@@ -68,9 +68,6 @@ public class SuperSafeTextureOptimizer : EditorWindow
                     importer.crunchedCompression = true;
                 else
                     importer.crunchedCompression = false;
-
-                // ❌ DefaultPlatform رو دیگه تغییر نمیدیم
-                // فقط Standalone/Android/iPhone
 
                 ApplyStandaloneSettings(importer);
                 ApplyPlatformSettings(importer, "Android");
